@@ -6,6 +6,22 @@
     <title>Ayaansh Mathur - Football Prodigy | Mumbai's Rising Star</title>
     <meta name="description" content="Discover Ayaansh Mathur, a 12-year-old football prodigy from Mumbai with 540+ goals, international tournament experience, and elite academy training.">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ayaansh Mathur - Football Prodigy | Mumbai's Rising Star">
+    <meta property="og:description" content="12-year-old football sensation with 540+ goals and international tournament experience. Elite academy trained in Mumbai.">
+    <meta property="og:image" content="AyaanshMathur.jpg">
+    <meta property="og:url" content="https://ayaanshmathur.com">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Ayaansh Mathur Football">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayaansh Mathur - Football Prodigy | Mumbai's Rising Star">
+    <meta name="twitter:description" content="12-year-old football sensation with 540+ goals and international tournament experience. Elite academy trained in Mumbai.">
+    <meta name="twitter:image" content="AyaanshMathur.jpg">
+    <meta name="twitter:site" content="@ayaansh_football">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -48,6 +64,58 @@
     </script>
     
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Enhanced Video Modal Styles */
+        #videoModal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        #videoModal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        #videoModal video {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        #videoModal .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            z-index: 1001;
+        }
+        
+        #videoModal .close-btn:hover {
+            transform: scale(1.2);
+            color: #F59E0B;
+        }
+        
+        .overflow-hidden {
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
     <!-- Navigation -->
@@ -151,7 +219,7 @@
                     
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 animate-fade-in" style="animation-delay: 0.6s;">
-                        <button class="bg-gradient-to-r from-football-green to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2">
+                        <button onclick="openVideoModal()" class="bg-gradient-to-r from-football-green to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-2">
                             <i class="fas fa-play"></i>
                             <span>View Highlights</span>
                         </button>
@@ -975,6 +1043,44 @@
         </div>
     </footer>
 
+    <!-- Enhanced Video Modal -->
+    <div id="videoModal">
+        <button onclick="closeVideoModal()" class="close-btn">&times;</button>
+        <div class="video-container">
+            <video id="highlightVideo" controls autoplay>
+                <source src="Ayaansh Mathur - Soccer Profile - 1stJuly 2025.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Video Modal Functions
+        function openVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('highlightVideo');
+            modal.classList.add('active');
+            document.body.classList.add('overflow-hidden');
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('highlightVideo');
+            modal.classList.remove('active');
+            document.body.classList.remove('overflow-hidden');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        // Close modal when clicking on backdrop
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+    </script>
+    
     <script src="app.js"></script>
 </body>
 </html>
