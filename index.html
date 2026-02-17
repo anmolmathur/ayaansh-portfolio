@@ -24,6 +24,9 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -468,13 +471,13 @@
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Skills Radar Chart -->
+                    <!-- Skills Radar Chart (Chart.js - live, crisp, no image dependency) -->
                     <div class="order-2 lg:order-1">
-                        <div class="bg-white rounded-3xl p-2 shadow-xl border border-gray-100">
-                            <img src="ayaansh_skills_radar.png"
-                                 alt="Ayaansh's Skills Radar Chart"
-                                 class="w-full rounded-2xl"
-                                 style="min-height: 420px; object-fit: contain;">
+                        <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
+                            <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Ayaansh's Technical Skills</h3>
+                            <div style="position: relative; width: 100%; height: 420px;">
+                                <canvas id="skillsRadarChart"></canvas>
+                            </div>
                         </div>
                     </div>
                     
@@ -1095,5 +1098,79 @@
     </script>
     
     <script src="app.js"></script>
+
+    <!-- Skills Radar Chart initialisation -->
+    <script>
+        (function () {
+            const ctx = document.getElementById('skillsRadarChart');
+            if (!ctx) return;
+
+            const labels = [
+                '1v1 Attacking', 'Tackling & Int.', 'Finishing',
+                'Dribbling', 'Ball Control', 'Passing',
+                'Confidence', 'Leadership', 'Teamwork',
+                'Decision Making', 'Motivation', 'Focus & Concent.',
+                'Endurance', 'Strength', 'Agility',
+                'Speed', 'Coordination', 'Game Understand.',
+                '1v1 Defending'
+            ];
+
+            const values = [88, 75, 95, 90, 88, 82, 90, 96, 92, 88, 90, 87, 80, 75, 85, 88, 85, 95, 72];
+
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Skill Rating',
+                        data: values,
+                        backgroundColor: 'rgba(16, 185, 129, 0.18)',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 2.5,
+                        pointBackgroundColor: 'rgba(30, 64, 175, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        pointHoverBackgroundColor: '#F59E0B',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: { padding: 10 },
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20,
+                                font: { size: 10 },
+                                color: '#6B7280',
+                                backdropColor: 'transparent',
+                            },
+                            grid: { color: 'rgba(0,0,0,0.08)' },
+                            angleLines: { color: 'rgba(0,0,0,0.10)' },
+                            pointLabels: {
+                                font: { size: 11, weight: '600' },
+                                color: '#1E40AF',
+                                padding: 6,
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ' ' + ctx.label + ': ' + ctx.raw + '/100';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
