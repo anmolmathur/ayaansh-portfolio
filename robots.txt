@@ -1,0 +1,115 @@
+# robots.txt — ayaanshmathur.com
+# Allow all search engines and AI crawlers full access
+
+# ── Standard Search Engines ───────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ── AI Training & Retrieval Crawlers ──────────────────────────────
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI (Gemini, AI Overviews, Vertex)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI (Llama)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft / Copilot
+User-agent: msnbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Amazon / Alexa
+User-agent: ia_archiver
+Allow: /
+
+# Common Crawl (used by many LLM training datasets)
+User-agent: CCBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Semrush / SEO tools (good for visibility)
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+# ── Catch-all: allow everything else ──────────────────────────────
+User-agent: *
+Allow: /
+
+# ── Sitemap ───────────────────────────────────────────────────────
+Sitemap: https://ayaanshmathur.com/sitemap.xml
+
+# ── llms.txt (AI profile document) ───────────────────────────────
+# AI bots: see /llms.txt for a structured plain-text summary of this site

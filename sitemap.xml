@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Main portfolio page -->
+  <url>
+    <loc>https://ayaanshmathur.com/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Player photo -->
+    <image:image>
+      <image:loc>https://ayaanshmathur.com/AyaanshMathur.jpg</image:loc>
+      <image:title>Ayaansh Mathur - Indian Youth Football Prodigy from Mumbai</image:title>
+      <image:caption>Ayaansh Mathur, 13-year-old football prodigy from Mumbai, India with 540+ goals and international tournament experience.</image:caption>
+      <image:geo_location>Mumbai, Maharashtra, India</image:geo_location>
+    </image:image>
+
+    <!-- Skills radar chart -->
+    <image:image>
+      <image:loc>https://ayaanshmathur.com/ayaansh_skills_radar.png</image:loc>
+      <image:title>Ayaansh Mathur Skills Radar Chart - Technical Football Attributes</image:title>
+      <image:caption>Radar chart showing Ayaansh Mathur's technical football skills including Finishing 95%, Leadership 96%, Game Understanding 95%.</image:caption>
+    </image:image>
+
+    <!-- Career timeline image -->
+    <image:image>
+      <image:loc>https://ayaanshmathur.com/career_timeline.png</image:loc>
+      <image:title>Ayaansh Mathur Career Timeline 2017–2025</image:title>
+      <image:caption>Career progression of Ayaansh Mathur from 2017 to 2025 including international tournaments and major achievements.</image:caption>
+    </image:image>
+
+    <!-- Stats infographic -->
+    <image:image>
+      <image:loc>https://ayaanshmathur.com/stats_infographic.png</image:loc>
+      <image:title>Ayaansh Mathur Career Statistics - 540+ Goals, 370+ Matches</image:title>
+      <image:caption>Career statistics infographic for Indian football prodigy Ayaansh Mathur: 540+ goals, 370+ matches, 55+ Man of Match awards.</image:caption>
+    </image:image>
+
+    <!-- Achievements grid -->
+    <image:image>
+      <image:loc>https://ayaanshmathur.com/achievements_grid.png</image:loc>
+      <image:title>Ayaansh Mathur Achievements and Trophies</image:title>
+      <image:caption>Trophy cabinet of Ayaansh Mathur including Mumbai U13 Inter-District Champions, Nashik League Champion, and Real Madrid World Cup Best Teamwork Award.</image:caption>
+    </image:image>
+
+    <!-- Highlight video -->
+    <video:video>
+      <video:thumbnail_loc>https://ayaanshmathur.com/AyaanshMathur.jpg</video:thumbnail_loc>
+      <video:title>Ayaansh Mathur Football Highlights - Indian Youth Soccer Prodigy</video:title>
+      <video:description>Official football highlight reel of Ayaansh Mathur, 13-year-old Indian football prodigy from Mumbai with 540+ goals. Showcases goals, skills, and leadership across domestic and international tournaments.</video:description>
+      <video:content_loc>https://ayaanshmathur.com/Ayaansh%20Mathur%20-%20Soccer%20Profile%20-%201stJuly%202025.mp4</video:content_loc>
+      <video:duration>120</video:duration>
+      <video:publication_date>2025-07-01</video:publication_date>
+      <video:tag>Indian football prodigy</video:tag>
+      <video:tag>Mumbai youth soccer</video:tag>
+      <video:tag>Ayaansh Mathur highlights</video:tag>
+      <video:tag>child footballer India</video:tag>
+      <video:tag>U13 football India</video:tag>
+      <video:category>Sports</video:category>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+
+  </url>
+
+  <!-- llms.txt — AI profile document -->
+  <url>
+    <loc>https://ayaanshmathur.com/llms.txt</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
