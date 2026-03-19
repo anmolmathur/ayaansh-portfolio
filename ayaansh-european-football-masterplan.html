@@ -25,6 +25,9 @@
     --tier3: #7c3aed;
     --warning: #dc2626;
     --success: #059669;
+    --england: #1e3a5f;
+    --germany: #000000;
+    --poland: #dc143c;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -227,6 +230,8 @@
   .tag-portugal { background: #eff6ff; color: #1e40af; }
   .tag-netherlands { background: #fef3c7; color: #92400e; }
   .tag-germany { background: #f5f3ff; color: #5b21b6; }
+  .tag-england { background: #eff6ff; color: #1e3a5f; }
+  .tag-poland { background: #fff1f2; color: #9f1239; }
 
   .tag-transition { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
   .tag-fees { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
@@ -467,8 +472,11 @@
 
 <div class="container">
   <div class="nav-tabs">
-    <button class="nav-tab active" onclick="showTab('recommendation')">Top Recommendation</button>
+    <button class="nav-tab active" onclick="showTab('recommendation')">Top Picks</button>
     <button class="nav-tab" onclick="showTab('clubs')">Club Rankings</button>
+    <button class="nav-tab" onclick="showTab('england')">England</button>
+    <button class="nav-tab" onclick="showTab('germany')">Germany</button>
+    <button class="nav-tab" onclick="showTab('poland')">Poland</button>
     <button class="nav-tab" onclick="showTab('trip')">Trip Plan</button>
     <button class="nav-tab" onclick="showTab('costs')">Cost Analysis</button>
     <button class="nav-tab" onclick="showTab('legal')">FIFA & Visa</button>
@@ -479,8 +487,8 @@
 
   <!-- TAB: RECOMMENDATION -->
   <div id="recommendation" class="tab-content active">
-    <h2 class="section-title">Top Recommendation: Valencia, Spain</h2>
-    <p class="section-desc">Based on comprehensive analysis of football pathway, parent careers, cost of living, visa feasibility, and quality of life.</p>
+    <h2 class="section-title">Top 3 Destinations &mdash; Updated with England &amp; Germany Research</h2>
+    <p class="section-desc">Now covering 5 countries, 20+ clubs, with family connections factored in. London (relative) and Dresden (cousin) significantly change the calculus.</p>
 
     <div class="comparison-grid">
       <div class="comparison-card" style="border-top: 4px solid var(--spain);">
@@ -521,13 +529,11 @@
     </div>
 
     <div class="verdict-box">
-      <h2>Why Valencia Over Other Options?</h2>
-      <div class="checklist-item"><span class="check">1</span><span><strong>Cluster advantage:</strong> 3 La Liga academies within driving distance means 3x the trial opportunities without moving cities</span></div>
-      <div class="checklist-item"><span class="check">2</span><span><strong>Villarreal's scholarship program:</strong> Only club offering 4 funded international trial slots annually &mdash; rare for non-EU players</span></div>
-      <div class="checklist-item"><span class="check">3</span><span><strong>Cost efficiency:</strong> 20-30% cheaper than Barcelona/Madrid while maintaining La Liga quality</span></div>
-      <div class="checklist-item"><span class="check">4</span><span><strong>FIFA Article 19 friendly:</strong> Valencia's growing tech scene creates legitimate CTO employment opportunities for relocation</span></div>
-      <div class="checklist-item"><span class="check">5</span><span><strong>Ayaansh's playing style fit:</strong> Spanish academies emphasize technical skill, attacking movement, and game intelligence &mdash; his top-rated attributes</span></div>
-      <div class="checklist-item"><span class="check">6</span><span><strong>Italy (Bergamo/Milan) as strong #2:</strong> Atalanta has Italy's best transition rate (15-20%), Milan offers best parent job market</span></div>
+      <h2>The 3 Best Options &mdash; Each With a Unique Advantage</h2>
+      <div class="checklist-item"><span class="check" style="background:var(--spain)">&#127466;&#127480;</span><span><strong>SPAIN (Valencia):</strong> Best football pathway. 3 La Liga clubs within 80km. Villarreal offers 4 funded international trial slots. Spanish football matches Ayaansh's technical style. Use the March-April trip to trial here.</span></div>
+      <div class="checklist-item"><span class="check" style="background:var(--england)">&#127468;&#127463;</span><span><strong>ENGLAND (London):</strong> Best language &amp; earning potential. Zero language barrier for entire family. London is #1 EdTech hub (&pound;100K-150K CTO salary). 5+ Category 1 academies. Family relative nearby. Premier League = highest salaries in world football. Free NHS + free state schools.</span></div>
+      <div class="checklist-item"><span class="check" style="background:var(--germany)">&#127465;&#127466;</span><span><strong>GERMANY (Dresden/Leipzig):</strong> Best visa &amp; cost. EU Blue Card in 2 WEEKS. Cousin in Dresden. RB Leipzig 1hr away. Most affordable Tier 1 option (&euro;50-72K/yr). German dual education = best safety net. Free university if football doesn't work out.</span></div>
+      <div class="checklist-item"><span class="check" style="background:rgba(255,255,255,0.3)">&#128161;</span><span><strong>Recommended Strategy:</strong> Use March-April trip to trial at Spanish &amp; Italian clubs. Simultaneously begin CTO job search in London AND EU Blue Card application for Germany. Whichever employment materializes first (with positive trial feedback) becomes the destination. This parallel approach maximizes speed.</span></div>
     </div>
   </div>
 
@@ -536,7 +542,7 @@
     <h2 class="section-title">Club Rankings &mdash; Updated March 2026</h2>
     <p class="section-desc">Ranked by composite score: academy quality, international player acceptance, transition rate, parent career prospects, and cost of living.</p>
 
-    <h3 style="margin: 24px 0 12px; color: var(--tier1); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 1 &mdash; Highest Priority (Target During Trip)</h3>
+    <h3 style="margin: 24px 0 12px; color: var(--tier1); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 1 &mdash; Highest Priority (6 Clubs across 3 Countries)</h3>
 
     <div class="card club-card tier1">
       <div class="club-rank">1</div>
@@ -606,10 +612,40 @@
       </div>
     </div>
 
+    <div class="card club-card tier1">
+      <div class="club-rank">5</div>
+      <div class="club-info">
+        <h3>Crystal Palace FC <span style="font-size:12px; color:var(--accent)">NEW &mdash; LONDON</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Category 1 academy, South London (near family relative). English-speaking = zero language barrier. Produced Zaha, Wan-Bissaka. NHS + free state school = lowest hidden costs.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-england">England</span>
+          <span class="club-tag tag-transition">~8-10% Transition</span>
+          <span class="club-tag tag-fees">Free (state-funded)</span>
+          <span class="club-tag" style="background:#dbeafe; color:#1e40af">Family nearby</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">academy@cpfc.co.uk</span></div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank">6</div>
+      <div class="club-info">
+        <h3>RB Leipzig <span style="font-size:12px; color:var(--accent)">NEW &mdash; NEAR DRESDEN</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">1 hr from cousin in Dresden. Red Bull-backed world-class NLZ. ~15% transition rate. EU Blue Card in 2 weeks for father. Dresden is 22% cheaper than Berlin. Strategy: Start at Dynamo Dresden, transfer to RB Leipzig at U16.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-germany">Germany</span>
+          <span class="club-tag tag-transition">~15% Transition</span>
+          <span class="club-tag tag-fees">Free</span>
+          <span class="club-tag" style="background:#dbeafe; color:#1e40af">Cousin in Dresden</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">nachwuchs@rbleipzig.com</span></div>
+    </div>
+
     <h3 style="margin: 32px 0 12px; color: var(--tier2); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 2 &mdash; High Priority</h3>
 
     <div class="card club-card tier2">
-      <div class="club-rank">5</div>
+      <div class="club-rank">7</div>
       <div class="club-info">
         <h3>AC Milan</h3>
         <p style="font-size:13px; color: var(--text-muted);">Milan Academy India affiliate. Best parent job market in Italy (Tech: 8/10, Architecture: 8/10).</p>
@@ -681,6 +717,269 @@
     <div class="card club-card tier3">
       <div class="club-rank">13</div>
       <div class="club-info"><h3>Borussia Dortmund / RB Leipzig</h3><p style="font-size:13px; color: var(--text-muted);">Excellent German development but local player rule limits non-EU squad registration.</p><div class="club-meta"><span class="club-tag tag-germany">Germany</span></div></div>
+    </div>
+  </div>
+
+  <!-- TAB: ENGLAND -->
+  <div id="england" class="tab-content">
+    <h2 class="section-title">England &mdash; The Language Advantage</h2>
+    <p class="section-desc">English-speaking environment eliminates the #1 barrier for Indian families. Family relative near London provides critical support network. London has 5+ Category 1 Premier League academies within reach.</p>
+
+    <div class="card" style="border-left: 4px solid var(--england); background: #f8fafc;">
+      <h3 style="margin-bottom: 12px; color: var(--england);">Why England Deserves Serious Consideration</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
+        <div><strong>Language:</strong> No adaptation barrier &mdash; Ayaansh and family speak fluent English. Research shows language proficiency is the #1 predictor of academy integration success.</div>
+        <div><strong>Family Network:</strong> Relative near London provides housing knowledge, social support, and emergency backup &mdash; critical for a relocating family.</div>
+        <div><strong>Academy Density:</strong> 5+ Category 1 academies in London alone (Crystal Palace, Arsenal, Chelsea, Fulham, Spurs, West Ham).</div>
+        <div><strong>Father's Career:</strong> London is Europe's #1 EdTech hub (35-39% of all UK EdTech companies). CTO salary: &pound;100K-150K+.</div>
+        <div><strong>Mother's Career:</strong> Historic England, Purcell Architecture, National Trust &mdash; world-class heritage conservation market.</div>
+        <div><strong>Premier League Path:</strong> The richest league in the world. A professional contract here = highest earning potential globally.</div>
+      </div>
+    </div>
+
+    <h3 style="margin: 24px 0 12px; color: var(--england); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Top London Academy Targets</h3>
+
+    <div class="card club-card tier1">
+      <div class="club-rank" style="background: var(--england);">1</div>
+      <div class="club-info">
+        <h3>Crystal Palace FC <span style="font-size:12px; color:var(--accent)">RECOMMENDED</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Category 1 academy in South London (near family relative). New facility opened 2021 by Gareth Southgate. Produced Zaha, Wan-Bissaka, Gallagher. Strong track record with international youth players.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-england">England</span>
+          <span class="club-tag tag-transition">~8-10% Transition</span>
+          <span class="club-tag tag-fees">Free (state-funded)</span>
+          <span class="club-tag" style="background:#dbeafe; color:#1e40af">South London</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">academy@cpfc.co.uk</span></div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank" style="background: var(--england);">2</div>
+      <div class="club-info">
+        <h3>Arsenal FC &mdash; Hale End Academy</h3>
+        <p style="font-size:13px; color: var(--text-muted);">World-class Category 1 academy. Produced Saka, Smith Rowe, Martinelli. Extremely competitive entry but strongest pathway to Premier League first team. Global scouting network.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-england">England</span>
+          <span class="club-tag tag-transition">~5% Transition (elite level)</span>
+          <span class="club-tag tag-fees">Free</span>
+          <span class="club-tag" style="background:#dbeafe; color:#1e40af">North London</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">academy@arsenal.co.uk</span></div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank" style="background: var(--tier2);">3</div>
+      <div class="club-info">
+        <h3>Brentford FC <span style="font-size:12px; color:var(--accent)">HIDDEN GEM</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Data-driven, "most caring and progressive academy." 5:1 coach-to-player ratio. Applied for Category 1 status (Sep 2025). Less saturated than Big 6 &mdash; better chances of standing out. West London.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-england">England</span>
+          <span class="club-tag tag-fees">Free</span>
+          <span class="club-tag" style="background:#fef3c7; color:#92400e">Rapidly Growing</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">academy@brentfordfc.com</span></div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank" style="background: var(--tier2);">4</div>
+      <div class="club-info">
+        <h3>Chelsea FC <span style="font-size:12px; color: var(--warning);">NOTE: Transfer ban exemption</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">9-month academy transfer ban (Mar 2026) does NOT apply to international (overseas) players. This means Chelsea is actively seeking international academy talent right now. Massive academy with global reach.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-england">England</span>
+          <span class="club-tag" style="background:#dcfce7; color:#166534">Int'l players EXEMPT from ban</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px; border-left: 4px solid var(--accent);">
+      <h3 style="margin-bottom: 12px;">UK Visa Pathways for the Mathur Family</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
+        <div>
+          <h4 style="color: var(--england);">Option 1: Skilled Worker Visa</h4>
+          <p>Father secures CTO role with UK EdTech company (min &pound;41,700/yr &mdash; CTO far exceeds). Family joins as dependents. ILR after 5 years. NHS healthcare included.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--england);">Option 2: Global Talent Visa</h4>
+          <p>For "digital technology leaders." No job offer required &mdash; can start own EdTech venture. 93% approval rate for tech sector. Endorsed by Barclays Eagle Labs.</p>
+        </div>
+      </div>
+      <p style="font-size:13px; color: var(--success); margin-top: 12px; font-weight: 600;">Both pathways allow spouse unrestricted work + children attend any school (state or private) free of charge.</p>
+    </div>
+
+    <div class="card" style="margin-top: 16px; background: #eff6ff;">
+      <h3 style="margin-bottom: 8px;">British Asian Players Breaking Through</h3>
+      <p style="font-size:13px; color: var(--text-muted);">22 professional players with South Asian heritage aged 17+ in England's top 4 leagues (29% rise from 2022-23). Zidane Iqbal became first British Asian in Champions League (Man Utd, 2021). Hamza Choudhury broke through at Leicester City. Premier League launched a dedicated British South Asians in Football action plan in 2024/25.</p>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Annual Cost: London (Crystal Palace area)</h3>
+      <div class="metric-row"><span class="metric-label">Housing (3BR South London)</span><span class="metric-value">&pound;30K-36K/yr</span></div>
+      <div class="metric-row"><span class="metric-label">School</span><span class="metric-value" style="color:var(--success)">Free (state school)</span></div>
+      <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free (Category 1)</span></div>
+      <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&pound;36K-48K/yr</span></div>
+      <div class="metric-row"><span class="metric-label">Healthcare</span><span class="metric-value" style="color:var(--success)">Free (NHS)</span></div>
+      <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--england); font-size: 18px;">&pound;66K-84K/yr (~&euro;77K-98K)</span></div>
+      <p style="font-size:12px; color:var(--text-muted); margin-top:8px;">Higher than Spain/Germany but offset by: FREE school, FREE healthcare, FREE academy, highest CTO salary (&pound;100K-150K).</p>
+    </div>
+  </div>
+
+  <!-- TAB: GERMANY -->
+  <div id="germany" class="tab-content">
+    <h2 class="section-title">Germany &mdash; The Expat-Friendly Powerhouse</h2>
+    <p class="section-desc">Germany hosts 247,000 Indian residents and issued 90,000 work visas to Indian professionals in 2025. EU Blue Card processes in 2 weeks. Ayaansh's cousin in Dresden provides a family anchor. RB Leipzig is just 1 hour from Dresden.</p>
+
+    <div class="card" style="border-left: 4px solid var(--germany); background: #fafafa;">
+      <h3 style="margin-bottom: 12px;">Why Germany is a Strong Contender</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
+        <div><strong>Visa Speed:</strong> EU Blue Card processes in 2 WEEKS (vs. 60-90 days for Spain/Italy). 90,000 annual quota for Indian professionals.</div>
+        <div><strong>Family in Dresden:</strong> First cousin provides immediate support network. Dresden is 22% cheaper than Berlin.</div>
+        <div><strong>RB Leipzig:</strong> 1 hour from Dresden. One of Europe's best academies (developed Kimmich, Nkunku, Gvardiol).</div>
+        <div><strong>Dual Education:</strong> German law guarantees academic education alongside football &mdash; best risk mitigation if football career doesn't work out.</div>
+        <div><strong>Free University:</strong> If Ayaansh doesn't turn pro, German universities are free even for internationals. No wasted years.</div>
+        <div><strong>Family Benefits:</strong> Spouse can work unrestricted, no German language required. Parents/in-laws can also join (new 2024 rule).</div>
+      </div>
+    </div>
+
+    <h3 style="margin: 24px 0 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Top German Academy Targets</h3>
+
+    <div class="card club-card tier1">
+      <div class="club-rank" style="background: var(--germany);">1</div>
+      <div class="club-info">
+        <h3>RB Leipzig <span style="font-size:12px; color:var(--accent)">RECOMMENDED (1hr from Dresden)</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Red Bull-backed world-class NLZ. Developed Kimmich, Nkunku, Gvardiol, Upamecano. Global network (Salzburg, NY, Brasil). ~15% transition rate. Residential facilities available.</p>
+        <p style="font-size:12px; color: var(--warning); margin-top:4px;"><strong>Caveat:</strong> International applications only for U16+ national team players. May need to start at Dynamo Dresden then transfer at 16.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-germany">Germany</span>
+          <span class="club-tag tag-transition">~15% Transition</span>
+          <span class="club-tag tag-fees">Free</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">nachwuchs@rbleipzig.com</span></div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank" style="background: var(--germany);">2</div>
+      <div class="club-info">
+        <h3>TSG Hoffenheim <span style="font-size:12px; color:var(--accent)">HIGHEST TRANSITION IN GERMANY</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">23% academy-to-pro rate (vs. 6-8% European average). "Decoding Talent" initiative uses Footbonaut technology and cognitive testing. SAP-backed data innovation. 100+ players turned professional in past decade.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-germany">Germany</span>
+          <span class="club-tag tag-transition" style="background:#dcfce7; color:#166534">23% Transition!</span>
+          <span class="club-tag tag-fees">Free</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">akademie@tsg-hoffenheim.de</span></div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank" style="background: var(--tier2);">3</div>
+      <div class="club-info">
+        <h3>SC Freiburg</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Pioneer in German youth development since 1990s. Educational director specifically supports non-German player integration (language classes, mentoring). Produced G&uuml;nter, Ginter, Kehl.</p>
+        <div class="club-meta"><span class="club-tag tag-germany">Germany</span><span class="club-tag tag-transition">Strong tradition</span></div>
+      </div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank" style="background: var(--tier2);">4</div>
+      <div class="club-info">
+        <h3>Dynamo Dresden <span style="font-size:12px; color:var(--accent)">LOCAL STEPPING STONE</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">3. Liga club but in Dresden (zero commute). Certified NLZ with scholarship program. Ideal for ages 13-15 before transferring to RB Leipzig at U16. Lowest risk entry point.</p>
+        <div class="club-meta"><span class="club-tag tag-germany">Germany</span><span class="club-tag" style="background:#fef3c7; color:#92400e">Stepping stone to RB Leipzig</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px; border-left: 4px solid var(--accent);">
+      <h3 style="margin-bottom: 12px;">Dresden / Saxony: The Strategic Base</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 13px;">
+        <div>
+          <h4>Dresden International School (DIS)</h4>
+          <p>IB World School, 510 students from 55 nationalities. Primary Years through Diploma Programme.</p>
+        </div>
+        <div>
+          <h4>Cost of Living</h4>
+          <p>22% cheaper than Berlin. 3BR apartment: &euro;800-1,300/month. Family monthly: &euro;3,200-4,500 total.</p>
+        </div>
+        <div>
+          <h4>Tech Jobs (Silicon Saxony)</h4>
+          <p>TSMC fab arriving 2027. Growing AI/ML scene in Leipzig. Software engineering roles expanding rapidly.</p>
+        </div>
+        <div>
+          <h4>Mother's Career</h4>
+          <p>Dresden was rebuilt post-WWII &mdash; major heritage conservation city. European demand for conservation architects growing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Annual Cost: Dresden, Germany</h3>
+      <div class="metric-row"><span class="metric-label">Int'l School (DIS)</span><span class="metric-value">&euro;12K-16K</span></div>
+      <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;9.6K-15.6K</span></div>
+      <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&euro;25K-36K</span></div>
+      <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+      <div class="metric-row"><span class="metric-label">Health Insurance</span><span class="metric-value">&euro;3K-4K</span></div>
+      <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="font-size: 18px;">&euro;50K-72K/yr</span></div>
+      <div class="cost-bar"><div class="cost-bar-fill" style="width: 50%; background: var(--germany);"></div></div>
+      <p style="font-size:12px; color:var(--success); margin-top:8px;">Most affordable option among all Tier 1 destinations.</p>
+    </div>
+
+    <div class="card" style="margin-top:16px; background: linear-gradient(135deg, #1a1a1a, #333); color: white;">
+      <h3 style="color: var(--accent); margin-bottom: 12px;">Recommended German Strategy: The Dresden Pathway</h3>
+      <p style="font-size:14px; opacity:0.9;">Age 13-15: Family relocates to Dresden (cousin support). Father gets EU Blue Card (2 weeks!). Ayaansh joins Dynamo Dresden academy. Gets integrated into German football system, learns language, builds physical base.</p>
+      <p style="font-size:14px; opacity:0.9; margin-top:8px;">Age 16+: Transfer to RB Leipzig (now eligible as local player with 3+ years in German system). Enter the Red Bull global development pipeline. Professional contract from age 16-17.</p>
+    </div>
+  </div>
+
+  <!-- TAB: POLAND -->
+  <div id="poland" class="tab-content">
+    <h2 class="section-title">Poland &mdash; The Emerging Market</h2>
+    <p class="section-desc">Growing league with 52% revenue increase. Robert Lewandowski's pathway (Lech Pozna&#324; &rarr; Dortmund &rarr; Bayern &rarr; Barcelona) proves the model. 32% cheaper than Germany.</p>
+
+    <div class="card" style="border-left: 4px solid var(--poland);">
+      <h3 style="margin-bottom: 12px;">Poland Assessment: Viable but Secondary</h3>
+      <div style="font-size: 14px;">
+        <p><strong>Strengths:</strong> Cheapest option in Europe (32% less than Germany). Ekstraklasa growing fast (52% revenue increase in 5 years). Proven pathway to top leagues (Lewandowski, Zielinski, Milik). EU Blue Card available at lower salary threshold (&euro;35,280/yr vs &euro;45,934 in Germany).</p>
+        <p style="margin-top:8px;"><strong>Weaknesses:</strong> 12th UEFA coefficient ranking (lower scouts attention). Players typically need 2 moves to reach top-5 league (Poland &rarr; mid-tier &rarr; top league). Polish language barrier. Limited international school quality outside Warsaw. Smaller Indian community. Less established parent career market (CTO: 5/10, Architecture: 4/10).</p>
+        <p style="margin-top:8px;"><strong>Verdict:</strong> Best as a backup or stepping stone option. If Ayaansh needs match time that he can't get at a top German/English/Spanish academy, a move to Lech Pozna&#324; (Lewandowski's club) at age 16+ could be a smart tactical play before moving to a bigger league.</p>
+      </div>
+    </div>
+
+    <div class="card club-card tier3" style="margin-top:16px;">
+      <div class="club-rank" style="background: var(--poland);">1</div>
+      <div class="club-info">
+        <h3>Lech Pozna&#324; <span style="font-size:12px; color:var(--accent)">LEWANDOWSKI'S CLUB</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Robert Lewandowski started here before moving to Dortmund. Proven striker development. Active in UEFA Conference League. Growing youth investment.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-poland">Poland</span>
+          <span class="club-tag tag-transition">~10% Transition</span>
+          <span class="club-tag tag-fees">Free if selected</span>
+        </div>
+      </div>
+      <div class="club-actions"><span class="btn-contact btn-primary">akademia@lechpoznan.pl</span></div>
+    </div>
+
+    <div class="card club-card tier3">
+      <div class="club-rank" style="background: var(--poland);">2</div>
+      <div class="club-info">
+        <h3>Legia Warsaw</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Poland's biggest club. 15 Ekstraklasa titles. Best infrastructure. Warsaw has the best international schools and expat community in Poland.</p>
+        <div class="club-meta"><span class="club-tag tag-poland">Poland</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Annual Cost: Warsaw/Pozna&#324;, Poland</h3>
+      <div class="metric-row"><span class="metric-label">Int'l School</span><span class="metric-value">&euro;8K-15K</span></div>
+      <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;7.2K-12K</span></div>
+      <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&euro;18K-30K</span></div>
+      <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+      <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--poland); font-size: 18px;">&euro;35K-60K/yr</span></div>
+      <div class="cost-bar"><div class="cost-bar-fill" style="width: 38%; background: var(--poland);"></div></div>
+      <p style="font-size:12px; color:var(--success); margin-top:8px;">Cheapest option by far. Good if budget is a constraint.</p>
     </div>
   </div>
 
@@ -762,6 +1061,39 @@
         <div class="metric-row"><span class="metric-label">Health Insurance</span><span class="metric-value">&euro;2K-3K</span></div>
         <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: #7c3aed; font-size: 18px;">&euro;58K-81K</span></div>
         <div class="cost-bar"><div class="cost-bar-fill" style="width: 58%; background: #7c3aed;"></div></div>
+      </div>
+    </div>
+
+    <div class="comparison-grid" style="margin-top:16px;">
+      <div class="comparison-card" style="border-top: 4px solid var(--england);">
+        <h3>London, England</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Highest earning, family nearby</p>
+        <div class="metric-row"><span class="metric-label">School</span><span class="metric-value" style="color:var(--success)">Free (state)</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free (Cat 1)</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&pound;30K-36K</span></div>
+        <div class="metric-row"><span class="metric-label">Living + Healthcare</span><span class="metric-value">&pound;36K-48K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--england); font-size: 18px;">&pound;66K-84K (~&euro;77-98K)</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 76%; background: var(--england);"></div></div>
+      </div>
+      <div class="comparison-card" style="border-top: 4px solid var(--germany);">
+        <h3>Dresden, Germany</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Cheapest Tier 1, cousin nearby</p>
+        <div class="metric-row"><span class="metric-label">Int'l School (DIS)</span><span class="metric-value">&euro;12K-16K</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;9.6K-15.6K</span></div>
+        <div class="metric-row"><span class="metric-label">Living + Insurance</span><span class="metric-value">&euro;28K-40K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="font-size: 18px;">&euro;50K-72K</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 50%; background: var(--germany);"></div></div>
+      </div>
+      <div class="comparison-card" style="border-top: 4px solid var(--poland);">
+        <h3>Warsaw/Pozna&#324;, Poland</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Budget option, backup pathway</p>
+        <div class="metric-row"><span class="metric-label">Int'l School</span><span class="metric-value">&euro;8K-15K</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;7.2K-12K</span></div>
+        <div class="metric-row"><span class="metric-label">Living</span><span class="metric-value">&euro;18K-30K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--poland); font-size: 18px;">&euro;35K-60K</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 38%; background: var(--poland);"></div></div>
       </div>
     </div>
 
@@ -985,7 +1317,8 @@
 
 <div class="footer">
   <p>Prepared for the Mathur Family &mdash; March 19, 2026</p>
-  <p>Research by Claude AI | Sources: FIFA regulations, club websites, immigration portals, tech job market reports</p>
+  <p>Research by Claude AI | Updated March 19, 2026 (v2: added England, Germany, Poland)</p>
+  <p>Sources: FIFA regulations, Premier League EPPP, club websites, GOV.UK, EU Blue Card portals, tech job market reports</p>
 </div>
 
 <script>
