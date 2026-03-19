@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayaansh Mathur - European Football Masterplan 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --primary: #1a5f2a;
+    --primary-light: #2d8a42;
+    --accent: #e8a317;
+    --accent-light: #f5c842;
+    --dark: #0f1923;
+    --card-bg: #ffffff;
+    --bg: #f0f4f3;
+    --text: #1a2332;
+    --text-muted: #5a6b7d;
+    --border: #d4dde6;
+    --spain: #c60b1e;
+    --italy: #009246;
+    --tier1: #1a5f2a;
+    --tier2: #2563eb;
+    --tier3: #7c3aed;
+    --warning: #dc2626;
+    --success: #059669;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, #1a3a2a 50%, var(--primary) 100%);
+    color: white;
+    padding: 60px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(232,163,23,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232,163,23,0.2);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 span { color: var(--accent); }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat .number {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .hero-stat .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .nav-tabs {
+    display: flex;
+    gap: 4px;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    margin: -20px auto 32px;
+    max-width: 1200px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow-x: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-tab {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .nav-tab:hover { background: var(--bg); }
+  .nav-tab.active { background: var(--primary); color: white; }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--dark);
+  }
+
+  .section-desc {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+
+  .club-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .club-rank {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .tier1 .club-rank { background: var(--tier1); }
+  .tier2 .club-rank { background: var(--tier2); }
+  .tier3 .club-rank { background: var(--tier3); }
+
+  .club-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .club-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .club-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  .tag-spain { background: #fef2f2; color: var(--spain); }
+  .tag-italy { background: #f0fdf4; color: var(--italy); }
+  .tag-portugal { background: #eff6ff; color: #1e40af; }
+  .tag-netherlands { background: #fef3c7; color: #92400e; }
+  .tag-germany { background: #f5f3ff; color: #5b21b6; }
+
+  .tag-transition { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+  .tag-fees { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+  .tag-status { background: #fefce8; color: #854d0e; border: 1px solid #fde68a; }
+
+  .club-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .btn-contact {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .btn-primary { background: var(--primary); color: white; }
+  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--primary);
+  }
+
+  .timeline-item.current::before { background: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  .timeline-item.future::before { background: var(--border); box-shadow: 0 0 0 2px var(--border); }
+
+  .timeline-date {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-item.current .timeline-date { color: var(--accent); }
+
+  .trip-day {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .trip-day:last-child { border-bottom: none; }
+
+  .day-label {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--primary);
+  }
+
+  .day-label.spain { color: var(--spain); }
+  .day-label.italy { color: var(--italy); }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .comparison-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border);
+  }
+
+  .comparison-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .comparison-card .country-flag {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .metric-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 13px;
+  }
+
+  .metric-row:last-child { border-bottom: none; }
+
+  .metric-label { color: var(--text-muted); }
+  .metric-value { font-weight: 600; }
+
+  .scam-card {
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .scam-red {
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+  }
+
+  .scam-green {
+    background: #f0fdf4;
+    border-left: 4px solid #059669;
+  }
+
+  .scam-card h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .scam-card p { font-size: 13px; color: var(--text-muted); }
+
+  .verdict-box {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: white;
+    padding: 32px;
+    border-radius: 16px;
+    margin-top: 24px;
+  }
+
+  .verdict-box h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .checklist-item .check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .cost-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+
+  .cost-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 32px;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 32px 20px 24px; }
+    .hero h1 { font-size: 28px; }
+    .nav-tabs { margin: -16px 12px 24px; }
+    .club-card { grid-template-columns: 1fr; }
+    .club-actions { flex-direction: row; align-items: center; }
+    .comparison-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Confidential Family Document</div>
+    <h1>Ayaansh Mathur <span>European Football Masterplan</span></h1>
+    <p class="hero-subtitle">Comprehensive research, club rankings, trip plan & relocation guide &mdash; March 2026</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="number">370+</div><div class="label">Matches</div></div>
+      <div class="hero-stat"><div class="number">540+</div><div class="label">Goals</div></div>
+      <div class="hero-stat"><div class="number">~1.5</div><div class="label">Goals/Match</div></div>
+      <div class="hero-stat"><div class="number">55+</div><div class="label">MoM Awards</div></div>
+      <div class="hero-stat"><div class="number">5</div><div class="label">Int'l Tournaments</div></div>
+      <div class="hero-stat"><div class="number">Top 50</div><div class="label">RFYC India</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showTab('recommendation')">Top Recommendation</button>
+    <button class="nav-tab" onclick="showTab('clubs')">Club Rankings</button>
+    <button class="nav-tab" onclick="showTab('trip')">Trip Plan</button>
+    <button class="nav-tab" onclick="showTab('costs')">Cost Analysis</button>
+    <button class="nav-tab" onclick="showTab('legal')">FIFA & Visa</button>
+    <button class="nav-tab" onclick="showTab('parents')">Parent Careers</button>
+    <button class="nav-tab" onclick="showTab('scams')">Scam Protection</button>
+    <button class="nav-tab" onclick="showTab('timeline')">Master Timeline</button>
+  </div>
+
+  <!-- TAB: RECOMMENDATION -->
+  <div id="recommendation" class="tab-content active">
+    <h2 class="section-title">Top Recommendation: Valencia, Spain</h2>
+    <p class="section-desc">Based on comprehensive analysis of football pathway, parent careers, cost of living, visa feasibility, and quality of life.</p>
+
+    <div class="comparison-grid">
+      <div class="comparison-card" style="border-top: 4px solid var(--spain);">
+        <div class="country-flag">&#9917;</div>
+        <h3>Football Pathway</h3>
+        <div class="metric-row"><span class="metric-label">La Liga clubs within 80km</span><span class="metric-value">3</span></div>
+        <div class="metric-row"><span class="metric-label">Primary Target</span><span class="metric-value">Valencia CF</span></div>
+        <div class="metric-row"><span class="metric-label">Secondary Target</span><span class="metric-value">Villarreal CF</span></div>
+        <div class="metric-row"><span class="metric-label">Backup</span><span class="metric-value">Levante UD</span></div>
+        <div class="metric-row"><span class="metric-label">Transition Rate</span><span class="metric-value" style="color:var(--success)">~12%</span></div>
+        <div class="metric-row"><span class="metric-label">Pro Contract Age</span><span class="metric-value">16+</span></div>
+        <div class="metric-row"><span class="metric-label">Int'l Player Programs</span><span class="metric-value" style="color:var(--success)">Yes (both clubs)</span></div>
+      </div>
+
+      <div class="comparison-card" style="border-top: 4px solid var(--accent);">
+        <div class="country-flag">&#128106;</div>
+        <h3>Family Life</h3>
+        <div class="metric-row"><span class="metric-label">Safety Index</span><span class="metric-value">9/10</span></div>
+        <div class="metric-row"><span class="metric-label">Climate</span><span class="metric-value">Mediterranean (warm)</span></div>
+        <div class="metric-row"><span class="metric-label">Public Transport</span><span class="metric-value">9/10</span></div>
+        <div class="metric-row"><span class="metric-label">Int'l Schools</span><span class="metric-value">Caxton College, ASV</span></div>
+        <div class="metric-row"><span class="metric-label">School Cost/yr</span><span class="metric-value">&euro;12K-16K</span></div>
+        <div class="metric-row"><span class="metric-label">Indian Community</span><span class="metric-value">Medium</span></div>
+        <div class="metric-row"><span class="metric-label">Cultural Difficulty</span><span class="metric-value">5/10</span></div>
+      </div>
+
+      <div class="comparison-card" style="border-top: 4px solid var(--primary);">
+        <div class="country-flag">&#128188;</div>
+        <h3>Parent Careers</h3>
+        <div class="metric-row"><span class="metric-label">Tech/CTO Jobs</span><span class="metric-value">7/10</span></div>
+        <div class="metric-row"><span class="metric-label">Architecture Jobs</span><span class="metric-value">5/10</span></div>
+        <div class="metric-row"><span class="metric-label">Remote Work Infra</span><span class="metric-value">Good</span></div>
+        <div class="metric-row"><span class="metric-label">Barcelona (tech hub)</span><span class="metric-value">3.5 hrs by train</span></div>
+        <div class="metric-row"><span class="metric-label">Digital Nomad</span><span class="metric-value">8/10</span></div>
+        <div class="metric-row"><span class="metric-label">Work Permit</span><span class="metric-value">Via employment</span></div>
+        <div class="metric-row"><span class="metric-label">EdTech Startups</span><span class="metric-value">412 (Barcelona)</span></div>
+      </div>
+    </div>
+
+    <div class="verdict-box">
+      <h2>Why Valencia Over Other Options?</h2>
+      <div class="checklist-item"><span class="check">1</span><span><strong>Cluster advantage:</strong> 3 La Liga academies within driving distance means 3x the trial opportunities without moving cities</span></div>
+      <div class="checklist-item"><span class="check">2</span><span><strong>Villarreal's scholarship program:</strong> Only club offering 4 funded international trial slots annually &mdash; rare for non-EU players</span></div>
+      <div class="checklist-item"><span class="check">3</span><span><strong>Cost efficiency:</strong> 20-30% cheaper than Barcelona/Madrid while maintaining La Liga quality</span></div>
+      <div class="checklist-item"><span class="check">4</span><span><strong>FIFA Article 19 friendly:</strong> Valencia's growing tech scene creates legitimate CTO employment opportunities for relocation</span></div>
+      <div class="checklist-item"><span class="check">5</span><span><strong>Ayaansh's playing style fit:</strong> Spanish academies emphasize technical skill, attacking movement, and game intelligence &mdash; his top-rated attributes</span></div>
+      <div class="checklist-item"><span class="check">6</span><span><strong>Italy (Bergamo/Milan) as strong #2:</strong> Atalanta has Italy's best transition rate (15-20%), Milan offers best parent job market</span></div>
+    </div>
+  </div>
+
+  <!-- TAB: CLUBS -->
+  <div id="clubs" class="tab-content">
+    <h2 class="section-title">Club Rankings &mdash; Updated March 2026</h2>
+    <p class="section-desc">Ranked by composite score: academy quality, international player acceptance, transition rate, parent career prospects, and cost of living.</p>
+
+    <h3 style="margin: 24px 0 12px; color: var(--tier1); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 1 &mdash; Highest Priority (Target During Trip)</h3>
+
+    <div class="card club-card tier1">
+      <div class="club-rank">1</div>
+      <div class="club-info">
+        <h3>Valencia CF</h3>
+        <p style="font-size:13px; color: var(--text-muted);">International program accepts video submissions. Tech-friendly city for father's CTO career.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-spain">Spain</span>
+          <span class="club-tag tag-transition">~12% Transition</span>
+          <span class="club-tag tag-fees">Free if selected</span>
+          <span class="club-tag tag-status">Status: Researching</span>
+        </div>
+      </div>
+      <div class="club-actions">
+        <span class="btn-contact btn-primary">academia@valenciacf.es</span>
+      </div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank">2</div>
+      <div class="club-info">
+        <h3>Villarreal CF <span style="font-size:12px; color:var(--accent)">NEW</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">4 full scholarships annually for international trial players. Excellent 9/10 facilities.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-spain">Spain</span>
+          <span class="club-tag tag-transition">~12% Transition</span>
+          <span class="club-tag tag-fees">Scholarship trials available</span>
+          <span class="club-tag tag-status">Status: New</span>
+        </div>
+      </div>
+      <div class="club-actions">
+        <span class="btn-contact btn-primary">academy@villarrealcf.es</span>
+      </div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank">3</div>
+      <div class="club-info">
+        <h3>Atalanta BC <span style="font-size:12px; color:var(--accent)">UPGRADED</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">#1 youth academy in Italy. 15-20% academy-to-first-team transition &mdash; highest in Serie A. Lowest cost option.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-italy">Italy</span>
+          <span class="club-tag tag-transition">15-20% Transition!</span>
+          <span class="club-tag tag-fees">Free</span>
+          <span class="club-tag tag-status">Status: Researching</span>
+        </div>
+      </div>
+      <div class="club-actions">
+        <span class="btn-contact btn-primary">segreteria@atalanta.it</span>
+      </div>
+    </div>
+
+    <div class="card club-card tier1">
+      <div class="club-rank">4</div>
+      <div class="club-info">
+        <h3>Sevilla FC</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Sergio Ramos alma mater. Intense pressing style suits Ayaansh. Already in Initial Contact.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-spain">Spain</span>
+          <span class="club-tag tag-transition">~10% Transition</span>
+          <span class="club-tag tag-fees">Free if selected</span>
+          <span class="club-tag tag-status" style="background:#dcfce7; color:#166534; border-color:#86efac">Status: Initial Contact</span>
+        </div>
+      </div>
+      <div class="club-actions">
+        <span class="btn-contact btn-primary">cantera@sevillafc.es</span>
+      </div>
+    </div>
+
+    <h3 style="margin: 32px 0 12px; color: var(--tier2); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 2 &mdash; High Priority</h3>
+
+    <div class="card club-card tier2">
+      <div class="club-rank">5</div>
+      <div class="club-info">
+        <h3>AC Milan</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Milan Academy India affiliate. Best parent job market in Italy (Tech: 8/10, Architecture: 8/10).</p>
+        <div class="club-meta">
+          <span class="club-tag tag-italy">Italy</span>
+          <span class="club-tag tag-transition">~8% Transition</span>
+          <span class="club-tag tag-fees">Free</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank">6</div>
+      <div class="club-info">
+        <h3>Inter Milan</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Inter Academy in 15+ nations. Strong physical/vertical play suits striker profile.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-italy">Italy</span>
+          <span class="club-tag tag-transition">~10% Transition</span>
+          <span class="club-tag tag-fees">Free</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank">7</div>
+      <div class="club-info">
+        <h3>Juventus FC</h3>
+        <p style="font-size:13px; color: var(--text-muted);">Global Academy Network. Next Gen (U23) pathway. Vinovo campus housing.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-italy">Italy</span>
+          <span class="club-tag tag-transition">~10% Transition</span>
+          <span class="club-tag tag-fees">Free if selected</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card club-card tier2">
+      <div class="club-rank">8</div>
+      <div class="club-info">
+        <h3>Real Betis <span style="font-size:12px; color:var(--accent)">NEW</span></h3>
+        <p style="font-size:13px; color: var(--text-muted);">Official "Betis Tryout" program specifically designed for international players.</p>
+        <div class="club-meta">
+          <span class="club-tag tag-spain">Spain</span>
+          <span class="club-tag tag-transition">~10% Transition</span>
+          <span class="club-tag tag-fees">Tryout program available</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin: 32px 0 12px; color: var(--tier3); font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Tier 3 &mdash; Medium Priority (Backup)</h3>
+
+    <div class="card club-card tier3">
+      <div class="club-rank">9</div>
+      <div class="club-info"><h3>Ajax Amsterdam</h3><p style="font-size:13px; color: var(--text-muted);">World-class academy but Netherlands visa more complex. Excellent English environment.</p><div class="club-meta"><span class="club-tag tag-netherlands">Netherlands</span></div></div>
+    </div>
+    <div class="card club-card tier3">
+      <div class="club-rank">10</div>
+      <div class="club-info"><h3>Benfica / Sporting CP</h3><p style="font-size:13px; color: var(--text-muted);">Portugal stepping stone league. Lower costs. Strong academy tradition.</p><div class="club-meta"><span class="club-tag tag-portugal">Portugal</span></div></div>
+    </div>
+    <div class="card club-card tier3">
+      <div class="club-rank">11</div>
+      <div class="club-info"><h3>Bologna FC <span style="font-size:12px; color:var(--accent)">NEW</span></h3><p style="font-size:13px; color: var(--text-muted);">Growing post-Champions League. UNESCO heritage city good for mother's career.</p><div class="club-meta"><span class="club-tag tag-italy">Italy</span></div></div>
+    </div>
+    <div class="card club-card tier3">
+      <div class="club-rank">12</div>
+      <div class="club-info"><h3>Empoli FC <span style="font-size:12px; color:var(--accent)">NEW</span></h3><p style="font-size:13px; color: var(--text-muted);">Youth-first philosophy. 15% transition rate. Near Florence (heritage architecture hub).</p><div class="club-meta"><span class="club-tag tag-italy">Italy</span></div></div>
+    </div>
+    <div class="card club-card tier3">
+      <div class="club-rank">13</div>
+      <div class="club-info"><h3>Borussia Dortmund / RB Leipzig</h3><p style="font-size:13px; color: var(--text-muted);">Excellent German development but local player rule limits non-EU squad registration.</p><div class="club-meta"><span class="club-tag tag-germany">Germany</span></div></div>
+    </div>
+  </div>
+
+  <!-- TAB: TRIP -->
+  <div id="trip" class="tab-content">
+    <h2 class="section-title">Spain &amp; Italy Trip Plan: Mar 29 &ndash; Apr 17</h2>
+    <p class="section-desc">Optimized itinerary to maximize club exposure across both countries.</p>
+
+    <div class="card" style="border-left: 4px solid var(--spain);">
+      <h3 style="margin-bottom: 16px;">Phase 1: Spain &mdash; Valencia Base (Mar 29 &ndash; Apr 10)</h3>
+      <div class="trip-day"><span class="day-label spain">Mar 29-31</span><span><strong>Settle & Acclimatize.</strong> Arrive Valencia. Light training, adjust to timezone (+3.5 hrs from India). Visit Valencia CF Ciudad Deportiva area.</span></div>
+      <div class="trip-day"><span class="day-label spain">Apr 1-4</span><span><strong>Valencia CF Assessment.</strong> Trial/assessment sessions. Also consider Madrid Easter Cup (Apr 2-5) if entry is possible.</span></div>
+      <div class="trip-day"><span class="day-label spain">Apr 5-7</span><span><strong>Villarreal CF Trial.</strong> 40 min from Valencia. Apply for 1-week scholarship trial. World-class Ciudad Deportiva facility.</span></div>
+      <div class="trip-day"><span class="day-label spain">Apr 8-9</span><span><strong>Travel to Seville.</strong> Train/flight Valencia &rarr; Seville (~2.5 hrs by plane, 4 hrs by train).</span></div>
+      <div class="trip-day"><span class="day-label spain">Apr 10</span><span><strong>Sevilla FC & Real Betis.</strong> Assessment with one or both clubs (already in Initial Contact with Sevilla).</span></div>
+    </div>
+
+    <div class="card" style="border-left: 4px solid var(--italy); margin-top: 16px;">
+      <h3 style="margin-bottom: 16px;">Phase 2: Italy &mdash; Milan Base (Apr 11 &ndash; Apr 17)</h3>
+      <div class="trip-day"><span class="day-label italy">Apr 10-11</span><span><strong>Travel.</strong> Fly Seville &rarr; Milan (~2.5 hrs). Check into Milan accommodation.</span></div>
+      <div class="trip-day"><span class="day-label italy">Apr 12-13</span><span><strong>AC Milan & Inter Milan.</strong> Assessment sessions. Leverage Milan Academy India affiliate connection for warm introduction.</span></div>
+      <div class="trip-day"><span class="day-label italy">Apr 14</span><span><strong>Bergamo Day Trip.</strong> 1 hr from Milan. Visit Atalanta BC Zingonia complex for assessment/meeting.</span></div>
+      <div class="trip-day"><span class="day-label italy">Apr 15-16</span><span><strong>Optional: Bologna FC.</strong> 1 hr by train from Milan. Visit if time allows.</span></div>
+      <div class="trip-day"><span class="day-label italy">Apr 17</span><span><strong>Depart.</strong> Final meetings, debrief, depart from Milan.</span></div>
+    </div>
+
+    <div class="card" style="background: #fffbeb; border: 1px solid #fde68a; margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Documents to Prepare BEFORE Trip</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px;">
+        <div>&#9745; 2-4 min highlight reel (position-specific)</div>
+        <div>&#9745; 8-12 min full-game footage</div>
+        <div>&#9745; One-page Player CV with stats</div>
+        <div>&#9745; Coach recommendation letters</div>
+        <div>&#9745; Medical fitness certificate</div>
+        <div>&#9745; Passport copies (full family)</div>
+        <div>&#9745; School transcripts</div>
+        <div>&#9745; Portfolio website link</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: COSTS -->
+  <div id="costs" class="tab-content">
+    <h2 class="section-title">Annual Cost Comparison (Family of 3)</h2>
+    <p class="section-desc">Estimated annual costs for family relocation to each destination.</p>
+
+    <div class="comparison-grid">
+      <div class="comparison-card" style="border-top: 4px solid var(--spain);">
+        <h3>Valencia, Spain</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Recommended</p>
+        <div class="metric-row"><span class="metric-label">Int'l School</span><span class="metric-value">&euro;12K-16K</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;21.6K-28.8K</span></div>
+        <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&euro;30K-42K</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+        <div class="metric-row"><span class="metric-label">Health Insurance</span><span class="metric-value">&euro;2.4K-3.6K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--primary); font-size: 18px;">&euro;66K-90K</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 68%; background: var(--spain);"></div></div>
+      </div>
+
+      <div class="comparison-card" style="border-top: 4px solid var(--italy);">
+        <h3>Milan, Italy</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Best for parent careers</p>
+        <div class="metric-row"><span class="metric-label">Int'l School</span><span class="metric-value">&euro;15K-20K</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;21.6K-30K</span></div>
+        <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&euro;33.6K-48K</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+        <div class="metric-row"><span class="metric-label">Health Insurance</span><span class="metric-value">&euro;2.4K-3.6K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: var(--italy); font-size: 18px;">&euro;73K-102K</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 80%; background: var(--italy);"></div></div>
+      </div>
+
+      <div class="comparison-card" style="border-top: 4px solid #7c3aed;">
+        <h3>Bergamo, Italy</h3>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom: 12px;">Most affordable + best academy</p>
+        <div class="metric-row"><span class="metric-label">Int'l School</span><span class="metric-value">&euro;12K-16K</span></div>
+        <div class="metric-row"><span class="metric-label">Housing (3BR)</span><span class="metric-value">&euro;14.4K-20.4K</span></div>
+        <div class="metric-row"><span class="metric-label">Living Expenses</span><span class="metric-value">&euro;28.8K-40.8K</span></div>
+        <div class="metric-row"><span class="metric-label">Academy</span><span class="metric-value" style="color:var(--success)">Free</span></div>
+        <div class="metric-row"><span class="metric-label">Health Insurance</span><span class="metric-value">&euro;2K-3K</span></div>
+        <div class="metric-row" style="font-weight:700; border-top: 2px solid var(--border); padding-top: 12px;"><span>TOTAL</span><span style="color: #7c3aed; font-size: 18px;">&euro;58K-81K</span></div>
+        <div class="cost-bar"><div class="cost-bar-fill" style="width: 58%; background: #7c3aed;"></div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px; background: #f0f9ff; border-color: #bae6fd;">
+      <h4 style="margin-bottom: 8px;">Investment Perspective</h4>
+      <p style="font-size: 13px; color: var(--text-muted);">At &euro;66K-90K/year for 3 years in Valencia = &euro;200K-270K total investment. A professional contract in La Liga starts at ~&euro;100K-300K/year for young players, with top performers earning &euro;1M+ within 5 years. The ROI timeline is 5-8 years from contract signing. Compare this with Indian ISL salaries of &euro;30K-100K/year with limited growth potential.</p>
+    </div>
+  </div>
+
+  <!-- TAB: LEGAL -->
+  <div id="legal" class="tab-content">
+    <h2 class="section-title">FIFA Regulations &amp; Visa Pathways</h2>
+    <p class="section-desc">Critical legal framework for international transfer of minors under 18.</p>
+
+    <div class="card" style="border-left: 4px solid var(--warning);">
+      <h3 style="margin-bottom: 12px;">FIFA Article 19 &mdash; The Rule</h3>
+      <p style="font-size: 14px;">FIFA prohibits international transfer of players under 18 years old. This is an absolute rule with only 5 narrow exceptions. Without an approved exception, no club can register Ayaansh.</p>
+    </div>
+
+    <div class="card" style="border-left: 4px solid var(--success); margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Exception #1: Parental Relocation (YOUR PATH)</h3>
+      <p style="font-size: 14px; margin-bottom: 12px;">If parents move to the club's country for <strong>non-football reasons</strong> (e.g., work, career), the child can register with a local club. This is the most commonly approved exception.</p>
+      <h4 style="font-size: 13px; margin-bottom: 8px;">Requirements:</h4>
+      <div style="font-size: 13px; line-height: 2;">
+        1. Both parents (or primary guardian) must relocate<br>
+        2. Employment contracts proving career-driven move (NOT football-driven)<br>
+        3. Housing proof in new country<br>
+        4. School enrollment for the player<br>
+        5. Health insurance documentation<br>
+        6. Application to FIFA Players' Status Committee<br>
+        7. International Transfer Certificate (ITC) from AIFF
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3 style="margin-bottom: 12px;">Critical: Spain's May 2025 Visa Change</h3>
+      <p style="font-size: 14px;">Spain removed eligibility for student visas for sports academies in May 2025. This means you <strong>cannot</strong> get Ayaansh a student visa to attend a football academy. The ONLY viable route is parent employment-based relocation, which then triggers the FIFA Article 19 exception naturally.</p>
+    </div>
+
+    <div class="comparison-grid" style="margin-top: 16px;">
+      <div class="comparison-card">
+        <h3>Spain Visa</h3>
+        <div class="metric-row"><span class="metric-label">Type</span><span class="metric-value">Work permit + family</span></div>
+        <div class="metric-row"><span class="metric-label">Processing</span><span class="metric-value">45-90 days</span></div>
+        <div class="metric-row"><span class="metric-label">Residency</span><span class="metric-value">After 5 years</span></div>
+        <div class="metric-row"><span class="metric-label">Financial Proof</span><span class="metric-value">Required</span></div>
+      </div>
+      <div class="comparison-card">
+        <h3>Italy Visa</h3>
+        <div class="metric-row"><span class="metric-label">Type</span><span class="metric-value">Work permit + family reunification</span></div>
+        <div class="metric-row"><span class="metric-label">Processing</span><span class="metric-value">60-90 days</span></div>
+        <div class="metric-row"><span class="metric-label">Minor Exemption</span><span class="metric-value" style="color:var(--success)">Yes (no 2yr wait)</span></div>
+        <div class="metric-row"><span class="metric-label">Income Required</span><span class="metric-value">&euro;6,700+/yr base</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: PARENTS -->
+  <div id="parents" class="tab-content">
+    <h2 class="section-title">Parent Career Opportunities by Destination</h2>
+    <p class="section-desc">Analysis of job markets for CTO/EdTech and Conservation Architecture roles.</p>
+
+    <div class="card">
+      <h3 style="margin-bottom: 16px;">Father: CTO / EdTech Technology Leader</h3>
+      <div class="comparison-grid">
+        <div class="comparison-card" style="border-top: 3px solid var(--spain);">
+          <h4>Valencia / Barcelona, Spain</h4>
+          <div class="metric-row"><span class="metric-label">Tech Rating</span><span class="metric-value">7/10</span></div>
+          <div class="metric-row"><span class="metric-label">EdTech Startups</span><span class="metric-value">412 (Barcelona)</span></div>
+          <div class="metric-row"><span class="metric-label">Remote Work</span><span class="metric-value">Excellent</span></div>
+          <div class="metric-row"><span class="metric-label">Salary Range</span><span class="metric-value">&euro;80K-150K</span></div>
+        </div>
+        <div class="comparison-card" style="border-top: 3px solid var(--italy);">
+          <h4>Milan, Italy</h4>
+          <div class="metric-row"><span class="metric-label">Tech Rating</span><span class="metric-value">8/10</span></div>
+          <div class="metric-row"><span class="metric-label">Digital Nomad</span><span class="metric-value">9/10</span></div>
+          <div class="metric-row"><span class="metric-label">Remote Work</span><span class="metric-value">Excellent</span></div>
+          <div class="metric-row"><span class="metric-label">Salary Range</span><span class="metric-value">&euro;90K-160K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3 style="margin-bottom: 16px;">Mother: Conservation Architect</h3>
+      <div class="comparison-grid">
+        <div class="comparison-card" style="border-top: 3px solid var(--italy);">
+          <h4>Italy (Florence/Milan/Bologna)</h4>
+          <div class="metric-row"><span class="metric-label">Heritage Rating</span><span class="metric-value">8-9/10</span></div>
+          <div class="metric-row"><span class="metric-label">UNESCO Sites</span><span class="metric-value">59 (most in world)</span></div>
+          <div class="metric-row"><span class="metric-label">Opportunities</span><span class="metric-value">Excellent</span></div>
+          <div class="metric-row"><span class="metric-label">Key Focus</span><span class="metric-value">Historic preservation, restoration</span></div>
+        </div>
+        <div class="comparison-card" style="border-top: 3px solid var(--spain);">
+          <h4>Spain (Valencia/Seville)</h4>
+          <div class="metric-row"><span class="metric-label">Heritage Rating</span><span class="metric-value">5-6/10</span></div>
+          <div class="metric-row"><span class="metric-label">UNESCO Sites</span><span class="metric-value">50</span></div>
+          <div class="metric-row"><span class="metric-label">Opportunities</span><span class="metric-value">Moderate</span></div>
+          <div class="metric-row"><span class="metric-label">Key Focus</span><span class="metric-value">UNESCO sites, Calatrava works</span></div>
+        </div>
+      </div>
+      <p style="font-size:13px; color: var(--text-muted); margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px;"><strong>Key Insight:</strong> Italy is significantly better for mother's career. If football pathway points to Spain but mother's career matters, consider: father takes remote CTO role (Barcelona-based company, living in Valencia), mother explores EU-wide conservation opportunities with Italian firms.</p>
+    </div>
+  </div>
+
+  <!-- TAB: SCAMS -->
+  <div id="scams" class="tab-content">
+    <h2 class="section-title">Scam Protection Guide</h2>
+    <p class="section-desc">Critical awareness for Indian families seeking European football opportunities. Scammers heavily target Indian families.</p>
+
+    <h3 style="margin: 16px 0 12px; color: var(--warning);">Red Flags &mdash; AVOID</h3>
+
+    <div class="scam-card scam-red">
+      <h4>Upfront payment requests</h4>
+      <p>Legitimate clubs NEVER charge for trials. FIFA rules state inviting clubs must cover travel, accommodation, and meals for trial players.</p>
+    </div>
+    <div class="scam-card scam-red">
+      <h4>Contact via Instagram DM, WhatsApp, or personal Gmail</h4>
+      <p>Real clubs only contact through official email (@villarrealcf.es, @sevillafc.es). Any agent using @gmail.com or social media DMs is suspect.</p>
+    </div>
+    <div class="scam-card scam-red">
+      <h4>"Guaranteed professional contract" promises</h4>
+      <p>No one can guarantee a contract before trials. This is the #1 manipulation tactic used against Indian families.</p>
+    </div>
+    <div class="scam-card scam-red">
+      <h4>Pressure to decide quickly or pay via Western Union/crypto</h4>
+      <p>Legitimate processes take weeks/months. Urgency is a manipulation tool.</p>
+    </div>
+    <div class="scam-card scam-red">
+      <h4>Scouts "discovering" your child on social media</h4>
+      <p>Real scouts attend recognized tournaments and work through official channels, not Instagram.</p>
+    </div>
+
+    <h3 style="margin: 24px 0 12px; color: var(--success);">Green Flags &mdash; TRUST</h3>
+
+    <div class="scam-card scam-green">
+      <h4>Official club email domains</h4>
+      <p>@valenciacf.es, @villarrealcf.es, @sevillafc.es, @acmilan.com, @inter.it, @atalanta.it</p>
+    </div>
+    <div class="scam-card scam-green">
+      <h4>FIFA-licensed agents</h4>
+      <p>Verify at: inside.fifa.com/transfer-system/agents &mdash; this is the ONLY official directory.</p>
+    </div>
+    <div class="scam-card scam-green">
+      <h4>Club covers trial costs</h4>
+      <p>Legitimate clubs that want to assess a player will cover travel and accommodation costs.</p>
+    </div>
+    <div class="scam-card scam-green">
+      <h4>Established organizations with verifiable track records</h4>
+      <p>FCV Football Academy, Spanish Soccer Trials, IDA Rome &mdash; all have verifiable histories and transparent processes.</p>
+    </div>
+  </div>
+
+  <!-- TAB: TIMELINE -->
+  <div id="timeline" class="tab-content">
+    <h2 class="section-title">Master Timeline: March 2026 &rarr; June 2027</h2>
+    <p class="section-desc">Step-by-step execution plan from today to Ayaansh joining a European academy.</p>
+
+    <div class="timeline">
+      <div class="timeline-item current">
+        <div class="timeline-date">NOW &mdash; March 2026</div>
+        <h4>Immediate Actions</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Send Ayaansh's highlight reel + CV to Valencia CF, Villarreal CF, Atalanta BC, and Real Betis. Confirm trial appointments for the trip. Prepare all travel documents.</p>
+      </div>
+
+      <div class="timeline-item current">
+        <div class="timeline-date">Mar 29 &ndash; Apr 17</div>
+        <h4>Spain & Italy Trial Trip</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Execute the trip plan. Assess 6-8 clubs. Collect feedback from coaches. Take notes on city/life quality for each location. Get written assessments where possible.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">April &ndash; May 2026</div>
+        <h4>Evaluate & Shortlist</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Review all trial feedback. Rank top 2-3 clubs. Begin discussions with shortlisted clubs about formal pathway. Get clear timeline from clubs on what they need.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">May &ndash; July 2026</div>
+        <h4>Father's Job Search</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Begin CTO/tech leadership job search in target country (Valencia/Barcelona for Spain, Milan for Italy). Engage recruitment agencies. Consider remote CTO roles with EU-based companies.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">July &ndash; September 2026</div>
+        <h4>Mother's Career Exploration</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Research conservation architecture opportunities. Connect with EU heritage firms. Explore freelance/remote possibilities. Italy has the strongest market for this specialty.</p>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-date">September &ndash; November 2026</div>
+        <h4>Secure Employment & Begin Visa</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Finalize parent employment contracts. Begin work permit application. Start gathering FIFA Article 19 documentation. Book school enrollment at target international school.</p>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-date">November 2026 &ndash; January 2027</div>
+        <h4>FIFA & Visa Approvals</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Submit FIFA Article 19 exception application with full documentation package. Process family visas. Confirm academy registration with chosen club. Processing: 60-90 days.</p>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-date">January &ndash; March 2027</div>
+        <h4>Finalize & Prepare</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Obtain all approvals. Finalize housing in target city. Complete school enrollment. Pack and prepare for move. Ayaansh completes current academic year in India.</p>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-date">April &ndash; June 2027</div>
+        <h4>Family Relocates</h4>
+        <p style="font-size:13px; color: var(--text-muted);">Move to target city. Ayaansh (age 14.5) joins academy. Settle into new life. Begin intensive 2-3 year development phase. Professional contract eligibility from age 16+.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background: linear-gradient(135deg, #0f1923 0%, #1a5f2a 100%); color: white; margin-top: 24px;">
+      <h3 style="color: var(--accent); margin-bottom: 12px;">The End Goal</h3>
+      <p style="font-size: 14px; opacity: 0.9;">By 2029-2030, Ayaansh (age 17-18) secures a professional contract with a European club. From there, the pathway opens to first-team football, transfers to bigger leagues, and ultimately &mdash; competing in the UEFA Champions League. The initial investment of &euro;200K-270K over 3 years is recovered within 2-3 years of a professional contract.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Prepared for the Mathur Family &mdash; March 19, 2026</p>
+  <p>Research by Claude AI | Sources: FIFA regulations, club websites, immigration portals, tech job market reports</p>
+</div>
+
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
