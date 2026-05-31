@@ -475,7 +475,7 @@
                                     </div>
                                     <div class="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span class="text-gray-600">Weight</span>
-                                        <span class="font-semibold text-gray-900">43 kg</span>
+                                        <span class="font-semibold text-gray-900">46 kg</span>
                                     </div>
                                     <div class="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span class="text-gray-600">Foot</span>
@@ -573,11 +573,56 @@
                 </div>
                 
                 <div class="relative">
-                    <!-- Timeline Image -->
+                    <!-- Timeline Graphic (inline SVG) -->
                     <div class="mb-12">
-                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/519fda07-dabd-4d93-99d2-021bf6469559.png" 
-                             alt="Career Timeline Visualization" 
-                             class="w-full max-w-4xl mx-auto rounded-3xl shadow-2xl">
+                        <svg viewBox="0 0 1100 340" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-4xl mx-auto rounded-3xl shadow-2xl" role="img" aria-label="Career progression timeline from 2017 to 2026">
+                            <defs>
+                                <linearGradient id="tlBg" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="100%" stop-color="#eef2ff"/>
+                                </linearGradient>
+                                <linearGradient id="tlLine" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#1e40af"/>
+                                    <stop offset="50%" stop-color="#10b981"/>
+                                    <stop offset="100%" stop-color="#f59e0b"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="1100" height="340" rx="28" fill="url(#tlBg)"/>
+                            <text x="550" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="34" font-weight="800" letter-spacing="3" fill="#0f172a">THE PROGRESSION</text>
+                            <text x="550" y="90" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="15" fill="#64748b">From first touch to European trials</text>
+                            <line x1="120" y1="220" x2="980" y2="220" stroke="url(#tlLine)" stroke-width="6" stroke-linecap="round"/>
+                            <g font-family="Inter,system-ui,sans-serif" text-anchor="middle">
+                                <text x="120" y="152" font-size="26">⚽</text>
+                                <text x="120" y="180" font-size="13" font-weight="700" fill="#334155">Foundation</text>
+                                <circle cx="120" cy="220" r="13" fill="#1e40af" stroke="#ffffff" stroke-width="3"/>
+                                <text x="120" y="272" font-size="18" font-weight="800" fill="#0f172a">2017</text>
+
+                                <text x="292" y="152" font-size="26">🌟</text>
+                                <text x="292" y="180" font-size="13" font-weight="700" fill="#334155">Breakthrough</text>
+                                <circle cx="292" cy="220" r="13" fill="#10b981" stroke="#ffffff" stroke-width="3"/>
+                                <text x="292" y="272" font-size="18" font-weight="800" fill="#0f172a">2020</text>
+
+                                <text x="464" y="152" font-size="26">🏆</text>
+                                <text x="464" y="180" font-size="13" font-weight="700" fill="#334155">100+ Goals</text>
+                                <circle cx="464" cy="220" r="13" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+                                <text x="464" y="272" font-size="18" font-weight="800" fill="#0f172a">2022</text>
+
+                                <text x="636" y="152" font-size="26">🌍</text>
+                                <text x="636" y="180" font-size="13" font-weight="700" fill="#334155">International</text>
+                                <circle cx="636" cy="220" r="13" fill="#ef4444" stroke="#ffffff" stroke-width="3"/>
+                                <text x="636" y="272" font-size="18" font-weight="800" fill="#0f172a">2023</text>
+
+                                <text x="808" y="152" font-size="26">⭐</text>
+                                <text x="808" y="180" font-size="13" font-weight="700" fill="#334155">Elite Camps</text>
+                                <circle cx="808" cy="220" r="13" fill="#7c3aed" stroke="#ffffff" stroke-width="3"/>
+                                <text x="808" y="272" font-size="18" font-weight="800" fill="#0f172a">2025</text>
+
+                                <text x="980" y="152" font-size="26">🎯</text>
+                                <text x="980" y="180" font-size="13" font-weight="700" fill="#0f766e">Current</text>
+                                <circle cx="980" cy="220" r="15" fill="#10b981" stroke="#ffffff" stroke-width="3"/>
+                                <text x="980" y="272" font-size="18" font-weight="800" fill="#0f172a">2026</text>
+                            </g>
+                        </svg>
                     </div>
                     
                     <!-- Timeline Items -->
@@ -638,7 +683,7 @@
                             </div>
                             <div class="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-100 ring-2 ring-football-green/30">
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">European Academy Trials <span class="text-xs bg-football-green text-white px-2 py-1 rounded-full ml-2">CURRENT</span></h3>
-                                <p class="text-gray-600">Active in YPL MFA U14 &amp; Leno U14 leagues with RMF White. European club outreach campaign to 8 top academies in Spain &amp; Italy. Trialling with La Liga and Serie A youth programmes.</p>
+                                <p class="text-gray-600">Competing in SFL U14 &amp; U16 and MFA Division 3 leagues, and represented Maharashtra in the Inter-State competition. European club outreach underway with trials at top Spain &amp; Italy academies.</p>
                             </div>
                         </div>
                     </div>
